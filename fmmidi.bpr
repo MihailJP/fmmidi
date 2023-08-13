@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="fmmidi.exe"/>
+    <OBJFILES value="fmmidi.obj Unit1.obj midisynth.obj sequencer.obj easywave.obj Unit2.obj 
+      Unit3.obj Unit4.obj wavwrite.obj Unit5.obj filter.obj"/>
+    <RESFILES value="fmmidi.res"/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) Unit1.dfm Unit2.dfm Unit3.dfm Unit4.dfm Unit5.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="rtl.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib rtl.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi vclx.bpi bcbsmp.bpi dbrtl.bpi adortl.bpi vcldb.bpi 
+      qrpt.bpi bdertl.bpi vcldbx.bpi dsnap.bpi cds.bpi bdecds.bpi teeui.bpi 
+      teedb.bpi tee.bpi teeqr.bpi ibxpress.bpi visualclx.bpi visualdbclx.bpi 
+      vclie.bpi xmlrtl.bpi inet.bpi inetdbbde.bpi inetdbxpress.bpi inetdb.bpi 
+      nmfast.bpi bcbie.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
+      indy.bpi bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="NDEBUG"/>
+    <SYSDEFINES value="NO_STRICT"/>
+    <MAINSOURCE value="fmmidi.cpp"/>
+    <INCLUDEPATH value="&quot;D:\Program Files\Borland\CBuilder6\Projects&quot;;D:\Projects\fmmidi;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="&quot;D:\Program Files\Borland\CBuilder6\Projects&quot;;D:\Projects\fmmidi;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w8092 -w8091 -w8090 -w8089 -w8087 -wprc -wuse -wucp -wstv -wstu -wsig 
+      -wpin -w-par -wnod -wnak -wdef -wcln -wbbf -wasm -wamp -wamb"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-Og -Ov -Oi -OS -H=$(BCB)\lib\vcl60.csm -Hc -Q -Vx -Ve -xp -ff -X- -pr -a8 
+      -5 -b- -d -k- -y -v -vi -c -tW -tWM"/>
+    <PFLAGS value="-$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="-D&quot;&quot; -Rr -Gz -aa -Tpe -x -Gn -w -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="fmmidi.res" FORMNAME="" UNITNAME="fmmidi.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="fmmidi.cpp" FORMNAME="" UNITNAME="fmmidi" CONTAINERID="C/C++ コンパイラ" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit1.cpp" FORMNAME="Form1" UNITNAME="Unit1" CONTAINERID="C/C++ コンパイラ" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="midisynth.cpp" FORMNAME="" UNITNAME="midisynth.cpp" CONTAINERID="C/C++ コンパイラ" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="sequencer.cpp" FORMNAME="" UNITNAME="sequencer.cpp" CONTAINERID="C/C++ コンパイラ" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="easywave.c" FORMNAME="" UNITNAME="easywave" CONTAINERID="C/C++ コンパイラ" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit2.cpp" FORMNAME="Form2" UNITNAME="Unit2" CONTAINERID="C/C++ コンパイラ" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit3.cpp" FORMNAME="Form3" UNITNAME="Unit3" CONTAINERID="C/C++ コンパイラ" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit4.cpp" FORMNAME="Form4" UNITNAME="Unit4" CONTAINERID="C/C++ コンパイラ" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="wavwrite.cpp" FORMNAME="" UNITNAME="wavwrite" CONTAINERID="C/C++ コンパイラ" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit5.cpp" FORMNAME="Form5" UNITNAME="Unit5" CONTAINERID="C/C++ コンパイラ" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="filter.cpp" FORMNAME="" UNITNAME="filter" CONTAINERID="C/C++ コンパイラ" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=1
+MinorVer=8
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1041
+CodePage=932
+
+[Version Info Keys]
+CompanyName=yuno's garbages
+FileDescription=The MIDI player with synthesizing FM sound in software.
+FileVersion=1.8.0.0
+InternalName=fmmidi
+LegalCopyright=(c)2003-2004 yuno
+LegalTrademarks=
+OriginalFilename=fmmidi.exe
+ProductName=fmmidi
+ProductVersion=1.8.0.0
+Comments=
+
+[Excluded Packages]
+d:\program files\borland\cbuilder6\Bin\bcbie60.bpl=Borland C++Builder Internet Explorer 5 Components Package
+D:\Program Files\Borland\CBuilder6\Bin\dclbcbsmp60.bpl=Borland Sample Controls Design Time Package
+d:\program files\borland\cbuilder6\Bin\dclite60.bpl=Borland Integrated Translation Environment
+d:\program files\borland\cbuilder6\Bin\idefilters60.bpl=IDE Filters
+
+[HistoryLists\hlIncludePath]
+Count=3
+Item0=D:\Program Files\Borland\CBuilder6\Projects;D:\Projects\fmmidi;$(BCB)\include;$(BCB)\include\vcl
+Item1=$(BCB)\include;$(BCB)\include\vcl
+Item2=..\sscheme;..\test;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=3
+Item0=D:\Program Files\Borland\CBuilder6\Projects;D:\Projects\fmmidi;$(BCB)\lib\obj;$(BCB)\lib
+Item1=$(BCB)\lib\obj;$(BCB)\lib
+Item2=..\sscheme;..\test;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=2
+Item0=NDEBUG
+Item1=_DEBUG
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=1
+LinkDebugVcl=0
+LinkCGLIB=0
+  </IDEOPTIONS>
+</PROJECT>
