@@ -540,6 +540,11 @@ namespace midisynth{
             /* use for rhythm part */
             int channel = data[6] & 0x0F;
             int map = data[8];
+            if(channel == 0) {
+                channel = 9;
+            }else if(channel < 10) {
+                --channel;
+            }
             if(map == 0){
                 channels[channel]->set_bank(0x3C80);
             }else{
