@@ -28,9 +28,9 @@ TForm1 *Form1;
 //---------------------------------------------------------------------------
 #undef feof
 #undef getc
-namespace std{
-    using ::__strcmp__;
-}
+//namespace std{
+//    using ::__strcmp__;
+//}
 //---------------------------------------------------------------------------
 const char* program_names[] = {
     "グランドピアノ",
@@ -1174,7 +1174,7 @@ namespace{
         bmp_skin_b.reset(new Graphics::TBitmap);
         bmp_skin_a->LoadFromFile("skin-a.bmp");
         bmp_skin_b->LoadFromFile("skin-b.bmp");
-        std::FILE* fp = std::fopen((ExtractFilePath(Application->ExeName) + "skin.txt").c_str(), "rt");
+        std::FILE* fp = std::_wfopen((ExtractFilePath(Application->ExeName) + L"skin.txt").c_str(), L"rt");
         if(!fp){
             fp = std::fopen("skin.txt", "rt");
         }
@@ -1241,7 +1241,7 @@ void update_skin(const char* format, int param1, int param2)
 namespace{
     void load_programs()
     {
-        std::FILE* fp = std::fopen((ExtractFilePath(Application->ExeName) + "programs.txt").c_str(), "rt");
+        std::FILE* fp = std::_wfopen((ExtractFilePath(Application->ExeName) + L"programs.txt").c_str(), L"rt");
         if(!fp){
             fp = std::fopen("programs.txt", "rt");
         }
@@ -1278,13 +1278,13 @@ namespace{
 }
 //---------------------------------------------------------------------------
 namespace{
-    std::vector<std::string> playlist;
+    std::vector<std::wstring> playlist;
     std::size_t playlist_index;
 }
 //---------------------------------------------------------------------------
-static void play_file(const char* filename)
+static void play_file(const wchar_t* filename)
 {
-    std::FILE* fp = std::fopen(filename, "rb");
+    std::FILE* fp = std::_wfopen(filename, L"rb");
     if(!fp){
         playlist.clear();
         ShowMessage(AnsiString(filename) + ":" + std::strerror(errno));
@@ -1815,7 +1815,7 @@ void __fastcall TForm1::WmDropFiles(TMessage& message)
 
     midi_reset();
 
-    char filename[1024];
+    wchar_t filename[1024];
     HDROP hDrop = reinterpret_cast<HDROP>(message.WParam);
     int n = DragQueryFile(hDrop, -1, NULL, 0);
     for(int i = 0; i < n; ++i){

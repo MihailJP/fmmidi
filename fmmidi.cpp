@@ -9,7 +9,7 @@ USEFORM("Unit3.cpp", Form3);
 USEFORM("Unit4.cpp", Form4);
 USEFORM("Unit5.cpp", Form5);
 //---------------------------------------------------------------------------
-WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
+int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPWSTR, int)
 {
     try
     {

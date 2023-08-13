@@ -11,10 +11,10 @@ namespace midisequencer{
         public:
             load_error(const std::string& s):std::runtime_error(s){}
         };
-        inline bool operator<(const midi_message& a, const midi_message& b)
-        {
-            return a.time < b.time;
-        }
+        //inline bool operator<(const midi_message& a, const midi_message& b)
+        //{
+        //    return a.time < b.time;
+        //}
         uint_least32_t read_variable_value(void* fp, int(*fgetc)(void*), uint_least32_t* track_length, const char* errtext)
         {
             int ret = 0;
@@ -30,6 +30,10 @@ namespace midisequencer{
             }while(d & 0x80);
             return ret;
         }
+    }
+    bool operator<(const midi_message& a, const midi_message& b)
+    {
+        return a.time < b.time;
     }
 
     sequencer::sequencer():

@@ -12,15 +12,12 @@ object Form1: TForm1
   Font.Name = #65325#65331' '#65328#12468#12471#12483#12463
   Font.Style = []
   Menu = MainMenu1
-  OldCreateOrder = False
-  Position = poDefaultPosOnly
   OnClose = FormClose
   OnCreate = FormCreate
   OnMouseDown = FormMouseDown
   OnMouseMove = FormMouseMove
   OnMouseUp = FormMouseUp
   OnPaint = FormPaint
-  PixelsPerInch = 96
   TextHeight = 12
   object MainMenu1: TMainMenu
     Left = 120

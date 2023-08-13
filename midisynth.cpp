@@ -2,6 +2,7 @@
 // Copyright(c)2003-2004 yuno
 #include "midisynth.hpp"
 
+#include <algorithm>
 #include <cassert>
 #include <cmath>
 #include <cstring>
@@ -52,8 +53,8 @@ namespace midisynth{
             }else{
                 panpot = panpot * (16384 - master_balance) / 8192 + (master_balance - 8192) * 2;
             }
-            int_least32_t left = static_cast<int_least32_t>(volume * std::cos(std::max(0, panpot - 1) * (M_PI / 2 / 16382)));
-            int_least32_t right = static_cast<int_least32_t>(volume * std::sin(std::max(0, panpot - 1) * (M_PI / 2 / 16382)));
+            int_least32_t left = static_cast<int_least32_t>(volume * std::cos(std::max(0uL, panpot - 1) * (M_PI / 2 / 16382)));
+            int_least32_t right = static_cast<int_least32_t>(volume * std::sin(std::max(0uL, panpot - 1) * (M_PI / 2 / 16382)));
             bool ret = note->synthesize(out, samples, rate, left, right);
             if(ret){
                 ++i;
@@ -446,7 +447,7 @@ namespace midisynth{
             all_sound_off();
             active_sensing = -1;
         }else if(active_sensing > 0){
-            active_sensing = std::max(0, active_sensing - samples / rate);
+            active_sensing = std::max(0.0f, active_sensing - samples / rate);
         }
         int_least32_t volume = static_cast<int_least32_t>(main_volume) * master_volume / 16384;
         int num_notes = 0;
@@ -1007,9 +1008,9 @@ namespace midisynth{
         // LFOÉeÅ[ÉuÉã
         const uint_least32_t ams_table[4] = {
             0,
-            128 - 128 * std::pow(10, -1.44 / 10),
-            128 - 128 * std::pow(10, -5.9 / 10),
-            128 - 128 * std::pow(10, -11.8 / 10)
+            128 - static_cast<uint_least32_t>(128 * std::pow(10, -1.44 / 10)),
+            128 - static_cast<uint_least32_t>(128 * std::pow(10, -5.9 / 10)),
+            128 - static_cast<uint_least32_t>(128 * std::pow(10, -11.8 / 10))
         };
     }
 

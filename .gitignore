@@ -30,3 +30,10 @@
 *.exe
 *.out
 *.app
+
+# C++ Builder
+fmmidi.cbproj.local
+__astcache/
+__history/
+__recovery/
+Win32/
