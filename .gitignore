@@ -37,3 +37,6 @@ __astcache/
 __history/
 __recovery/
 Win32/
+
+# Packages
+fmmidi*.zip
